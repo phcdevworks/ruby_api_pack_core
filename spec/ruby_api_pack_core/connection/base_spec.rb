@@ -138,6 +138,30 @@ RSpec.describe RubyApiPackCore::Connection::Base do
 
       expect(connection.api_get).to eq({})
     end
+
+    it 'raises when the response has no headers' do
+      headerless_response = instance_double(
+        HTTParty::Response,
+        code: 200,
+        body: '{"id":1}',
+        headers: nil
+      )
+      allow(HTTParty).to receive(:get).and_return(headerless_response)
+
+      expect { connection.api_get }.to raise_error(/Unexpected response/)
+    end
+
+    it 'raises when the content-type header is missing' do
+      no_content_type_response = instance_double(
+        HTTParty::Response,
+        code: 200,
+        body: '{"id":1}',
+        headers: {}
+      )
+      allow(HTTParty).to receive(:get).and_return(no_content_type_response)
+
+      expect { connection.api_get }.to raise_error(/Unexpected response/)
+    end
   end
 
   describe 'unimplemented #auth_headers' do

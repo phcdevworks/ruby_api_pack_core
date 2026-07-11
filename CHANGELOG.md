@@ -33,6 +33,12 @@ Change type: additive (initial extraction)
   `SECURITY.md`, `CODE_OF_CONDUCT.md`, `MIT-LICENSE`, `ROADMAP.md`,
   `TODO.md`, GitHub issue/PR templates, CI workflows, and `.coderabbit.yaml`.
 
+### Changed
+
+- Bumped `httparty` to `~> 0.24.0` (from `~> 0.22.0`) and `rubocop-rake` to
+  `~> 0.7.0` (from `~> 0.6.0`) to track current RubyGems releases.
+- Bumped the development `bundler` constraint to `~> 4.0` (from `~> 2.5`).
+
 ## [0.1.0] - 2026-07-11
 
 ### Added
