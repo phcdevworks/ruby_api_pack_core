@@ -9,6 +9,9 @@ gem 'multi_xml', '0.7.1'
 
 group :development, :test do
   gem 'bundler', '~> 2.5'
+  # parallel >= 2.0 requires Ruby >= 3.3; rubocop's dependency on parallel is
+  # unbounded, so pin it directly to stay compatible with required_ruby_version.
+  gem 'parallel', '1.28.0'
   gem 'rake', '~> 13.2'
   gem 'rspec', '~> 3.13'
   gem 'rubocop', '~> 1.64', require: false

@@ -43,6 +43,10 @@ Change type: additive (initial extraction)
   keeps the resolved dependency tree within `required_ruby_version` (>= 3.1.0).
 - Reverted an attempted development `bundler` bump to `~> 4.0`; kept `~> 2.5`
   after CI failed to resolve/install the newer major version.
+- Pinned `parallel` to `1.28.0` in the `Gemfile`: `rubocop`'s dependency on
+  `parallel` is unbounded, and `parallel >= 2.0` requires Ruby >= 3.3, which
+  also broke the Ruby 3.1.7 CI leg. Audited the full resolved dependency tree
+  against `required_ruby_version` to rule out further Ruby-version cliffs.
 
 ## [0.1.0] - 2026-07-11
 
