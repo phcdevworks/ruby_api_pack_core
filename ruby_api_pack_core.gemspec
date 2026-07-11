@@ -16,7 +16,7 @@ Gem::Specification.new do |spec|
   spec.license = 'MIT'
 
   # Specify the required Ruby version
-  spec.required_ruby_version = '>= 3.1.0'
+  spec.required_ruby_version = '>= 3.3.0'
 
   # Gem Meta Data
   spec.metadata['allowed_push_host'] = 'https://rubygems.org/'
@@ -37,6 +37,6 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   # Main Dependencies
-  spec.add_dependency 'httparty', '~> 0.24.0'
-  spec.add_dependency 'oj', '~> 3.16'
+  spec.add_dependency 'httparty', '~> 0.24.2'
+  spec.add_dependency 'oj', '~> 3.17'
 end

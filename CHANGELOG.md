@@ -37,16 +37,15 @@ Change type: additive (initial extraction)
 
 - Bumped `httparty` to `~> 0.24.0` (from `~> 0.22.0`) and `rubocop-rake` to
   `~> 0.7.0` (from `~> 0.6.0`) to track current RubyGems releases.
-- Pinned `multi_xml` to `0.7.1` in the `Gemfile`: `httparty`'s dependency on
-  `multi_xml` is unbounded, and `multi_xml >= 0.7.2` requires Ruby >= 3.2,
-  which broke CI (still on Ruby 3.1.7) after the `httparty` bump. The pin
-  keeps the resolved dependency tree within `required_ruby_version` (>= 3.1.0).
 - Reverted an attempted development `bundler` bump to `~> 4.0`; kept `~> 2.5`
   after CI failed to resolve/install the newer major version.
-- Pinned `parallel` to `1.28.0` in the `Gemfile`: `rubocop`'s dependency on
-  `parallel` is unbounded, and `parallel >= 2.0` requires Ruby >= 3.3, which
-  also broke the Ruby 3.1.7 CI leg. Audited the full resolved dependency tree
-  against `required_ruby_version` to rule out further Ruby-version cliffs.
+- Raised `required_ruby_version` to `>= 3.3.0` (from `>= 3.1.0`), matching
+  Rails 8's own Ruby floor. `httparty` and `rubocop` both carry unbounded
+  transitive dependencies (`multi_xml`, `parallel`) whose newer majors
+  require Ruby >= 3.2 and >= 3.3 respectively; rather than pin those
+  transitive deps indefinitely, dropped support for Ruby versions below what
+  Rails 8 itself requires. Updated the CI matrix to `['3.3.4', '3.4']`
+  accordingly.
 
 ## [0.1.0] - 2026-07-11
 
