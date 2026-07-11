@@ -3,8 +3,12 @@
 source 'https://rubygems.org'
 gemspec
 
+# multi_xml >= 0.7.2 drops Ruby 3.1 support; httparty's dependency on multi_xml
+# is unbounded, so pin it directly to stay compatible with required_ruby_version.
+gem 'multi_xml', '0.7.1'
+
 group :development, :test do
-  gem 'bundler', '~> 4.0'
+  gem 'bundler', '~> 2.5'
   gem 'rake', '~> 13.2'
   gem 'rspec', '~> 3.13'
   gem 'rubocop', '~> 1.64', require: false

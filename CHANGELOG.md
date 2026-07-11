@@ -37,7 +37,12 @@ Change type: additive (initial extraction)
 
 - Bumped `httparty` to `~> 0.24.0` (from `~> 0.22.0`) and `rubocop-rake` to
   `~> 0.7.0` (from `~> 0.6.0`) to track current RubyGems releases.
-- Bumped the development `bundler` constraint to `~> 4.0` (from `~> 2.5`).
+- Pinned `multi_xml` to `0.7.1` in the `Gemfile`: `httparty`'s dependency on
+  `multi_xml` is unbounded, and `multi_xml >= 0.7.2` requires Ruby >= 3.2,
+  which broke CI (still on Ruby 3.1.7) after the `httparty` bump. The pin
+  keeps the resolved dependency tree within `required_ruby_version` (>= 3.1.0).
+- Reverted an attempted development `bundler` bump to `~> 4.0`; kept `~> 2.5`
+  after CI failed to resolve/install the newer major version.
 
 ## [0.1.0] - 2026-07-11
 
