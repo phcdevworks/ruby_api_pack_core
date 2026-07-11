@@ -10,7 +10,6 @@ a release promise.
   stable now that `ruby_api_pack_active_campaign`, `ruby_api_pack_cloudways`,
   and `ruby_api_pack_wordpress` all depend on this gem.
 - Keep this gem free of any vendor-specific knowledge.
-- Improve release hygiene for RubyGems publishing.
 
 ## Near-Term
 

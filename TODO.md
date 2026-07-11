@@ -27,6 +27,6 @@
 
 ## Release
 
-- [ ] Confirm gemspec metadata links point to the repository and changelog.
-- [ ] Document RubyGems release steps.
-- [ ] Confirm supported Ruby versions in CI match the gemspec.
+- [x] Confirm gemspec metadata links point to the repository and changelog.
+- [x] Document RubyGems release steps.
+- [x] Confirm supported Ruby versions in CI match the gemspec.

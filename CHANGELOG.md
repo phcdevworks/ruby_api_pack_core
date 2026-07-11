@@ -4,7 +4,7 @@ All notable changes to this project will be documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the versioning
 reflects gem releases published to RubyGems.
 
-## [Unreleased]
+## [0.1.0] - 2026-07-11 — Phase 0 - Shared Foundations
 
 Change type: additive (initial extraction)
 
@@ -46,9 +46,3 @@ Change type: additive (initial extraction)
   transitive deps indefinitely, dropped support for Ruby versions below what
   Rails 8 itself requires. Updated the CI matrix to `['3.3.4', '3.4']`
   accordingly.
-
-## [0.1.0] - 2026-07-11
-
-### Added
-
-- Initial release.
