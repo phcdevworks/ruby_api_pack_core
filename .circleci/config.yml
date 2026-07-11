@@ -31,6 +31,9 @@ jobs:
       - run: bundle exec rubocop
       - codecov/upload:
           file: coverage/.resultset.json
+      - codecov/upload:
+          file: tmp/test-results/rspec.xml
+          xtra_args: --report-type test_results
 
 workflows:
   test:
