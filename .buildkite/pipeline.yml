@@ -2,11 +2,9 @@ steps:
   - label: ':ruby: ruby_api_pack_core verify'
     key: 'verify'
     command:
-      - 'command -v rbenv >/dev/null || (git clone https://github.com/rbenv/rbenv.git ~/.rbenv && git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build)'
-      - 'export PATH="$HOME/.rbenv/bin:$PATH" && eval "$(rbenv init -)" && rbenv install -s 3.3.4 && rbenv global 3.3.4'
-      - 'export PATH="$HOME/.rbenv/bin:$PATH" && eval "$(rbenv init -)" && gem install bundler && bundle install'
-      - 'export PATH="$HOME/.rbenv/bin:$PATH" && eval "$(rbenv init -)" && bundle exec rspec'
-      - 'export PATH="$HOME/.rbenv/bin:$PATH" && eval "$(rbenv init -)" && bundle exec rubocop'
+      - 'bundle install'
+      - 'bundle exec rspec'
+      - 'bundle exec rubocop'
     agents:
       queue: 'default'
     timeout_in_minutes: 15
