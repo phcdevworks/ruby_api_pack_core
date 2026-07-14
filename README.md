@@ -1,5 +1,14 @@
 # Ruby API Pack Core
 
+`ruby_api_pack_core` provides the shared connection wrapper, response
+validator, and configuration pattern used by every `ruby_api_pack_*` gem, so
+each vendor-specific API pack only has to implement its own authentication
+headers and resource endpoints.
+
+Maintained by [PHCDevworks](https://go.phcdev.co). It is the shared
+foundation that `ruby_api_pack_active_campaign`, `ruby_api_pack_cloudways`,
+and `ruby_api_pack_wordpress` all depend on for their HTTP client behavior.
+
 ## Repository Snapshot
 
 | Field | Value |
@@ -37,7 +46,8 @@
 | Contributing | [CONTRIBUTING.md](CONTRIBUTING.md) |
 
 [![Gem Version](https://img.shields.io/gem/v/ruby_api_pack_core.svg)](https://rubygems.org/gems/ruby_api_pack_core)
-[![RSpec](https://github.com/phcdevworks/ruby_api_pack_core/actions/workflows/test.yml/badge.svg)](https://github.com/phcdevworks/ruby_api_pack_core/actions/workflows/test.yml)
+[![CircleCI](https://img.shields.io/circleci/build/github/phcdevworks/ruby_api_pack_core/main.svg)](https://circleci.com/gh/phcdevworks/ruby_api_pack_core)
+[![codecov](https://codecov.io/gh/phcdevworks/ruby_api_pack_core/graph/badge.svg)](https://codecov.io/gh/phcdevworks/ruby_api_pack_core)
 [![License](https://img.shields.io/github/license/phcdevworks/ruby_api_pack_core.svg)](MIT-LICENSE)
 
 `ruby_api_pack_core` is the shared HTTP client foundation consumed by every

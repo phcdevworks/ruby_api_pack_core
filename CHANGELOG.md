@@ -4,7 +4,9 @@ All notable changes to this project will be documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the versioning
 reflects gem releases published to RubyGems.
 
-## [0.1.0] - 2026-07-11 — Phase 0 - Shared Foundations
+## [0.1.0] - 2026-07-11
+
+**Release Title:** Phase 0 - Shared Foundations
 
 Change type: additive (initial extraction)
 
