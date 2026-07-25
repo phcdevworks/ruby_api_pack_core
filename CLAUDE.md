@@ -92,11 +92,12 @@ Update:
 
 ## Release Procedure
 
-1. Update `lib/ruby_api_pack_core/version.rb`.
-2. Move changelog notes from `[Unreleased]` into a dated version section.
-3. Run the validation gate described in [AGENTS.md](AGENTS.md).
-4. Confirm `ruby_api_pack_active_campaign`, `ruby_api_pack_cloudways`, and
-   `ruby_api_pack_wordpress` still pass their own validation gates against the
-   new version before publishing, if the change is anything other than
-   additive.
-5. Build and publish only when the maintainer explicitly approves.
+Claude Code implements features and fixes with a `CHANGELOG.md [Unreleased]`
+entry per change. Cutting the release itself — version bump, changelog
+versioning, `v<version>` tag, and GitHub Release — is Codex's job; see
+`CODEX.md` "Release Mechanics" for the full procedure. That procedure
+includes confirming `ruby_api_pack_active_campaign`, `ruby_api_pack_cloudways`,
+and `ruby_api_pack_wordpress` still pass their own validation gates against
+the new version before any breaking or non-additive change ships, since
+those three gems depend on this one. `gem push` (RubyGems publish) stays
+with Bradley Potts regardless of who prepares the release.
