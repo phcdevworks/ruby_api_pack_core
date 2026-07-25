@@ -54,7 +54,7 @@ Run the validation gate described in [AGENTS.md](AGENTS.md).
 ## Hard Limits
 
 - Do not publish the gem unless explicitly asked.
-- Do not create commits, tags, or releases unless explicitly asked.
+- Codex has commit, push, and tag authority for its own scope of work; do not publish the gem or cut releases unless explicitly asked.
 - Do not overwrite unrelated local changes.
 - Do not add vendor-specific knowledge, real credentials, or sensitive
   payloads to documentation or tests.
