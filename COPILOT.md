@@ -13,7 +13,7 @@ not own architecture, release decisions, or final handoff authority.
   resource classes) — that belongs in the consuming `ruby_api_pack_*` gems.
 - Add focused RSpec coverage for behavior changes.
 - Keep README and changelog aligned with public usage.
-- Do not create commits unless explicitly asked.
+- Copilot has commit, push, and tag authority per the companywide grant, scoped to this work.
 
 ## Validation
 
