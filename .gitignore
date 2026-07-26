@@ -1,11 +1,18 @@
+# Ruby / Bundler
 /.bundle/
+/pkg/
+*.gem
+
+# Documentation
 /.yardoc
 /_yardoc/
-/coverage/
 /doc/
-/pkg/
+
+# Test/runtime artifacts
+/coverage/
 /spec/reports/
-/tmp/
-*.gem
 .rspec_status
+/tmp/
+
+# Secrets
 .env
