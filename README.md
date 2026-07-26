@@ -63,7 +63,7 @@ boilerplate.
 [Changelog](CHANGELOG.md) | [Roadmap](ROADMAP.md) |
 [Security Policy](SECURITY.md) | [AI Guide](AGENTS.md)
 
-## Source of Truth
+## Source Of Truth
 
 The gem's public behavior is defined by its connection base class, response
 validator, configurable mixin, and specs. Keep those surfaces aligned — every
@@ -107,6 +107,22 @@ gem build ruby_api_pack_core.gemspec
 - Host application models, persistence, background jobs, or authorization
 - User-facing Rails controllers or UI components
 - Storage of production credentials or API tokens
+
+## When To Use This Gem
+
+- You are building a new `ruby_api_pack_*` vendor gem and need the shared
+  HTTP client foundation (connection wrapper, response validation,
+  `configure`/`configuration` pattern) instead of hand-rolling it.
+- You want consistent GET/POST/PUT/DELETE handling, status checking, and
+  JSON parsing behavior across every PHCDevworks API pack gem.
+
+## When Not To Use This Gem
+
+- You need vendor-specific API behavior (auth headers, endpoint paths,
+  resource classes) — that belongs in a `ruby_api_pack_*` vendor gem, not
+  here.
+- You need a general-purpose HTTP client for one-off API calls outside the
+  `ruby_api_pack_*` family — use HTTParty or a similar library directly.
 
 ## Installation
 
@@ -274,6 +290,25 @@ Spectre and Rails/Ruby workspaces:
   GitHub-integrated assistant guidance.
 - `CHANGELOG.md`, `ROADMAP.md`, and `TODO.md` keep release and planning context
   visible.
+
+## AI And Automation Boundaries
+
+Claude Code (`claude-sonnet-4-6`) is the primary development agent for this
+repository. Codex handles releases, including cutting tagged releases and
+GitHub Releases. GitHub Copilot and Jules provide additional development
+support per their scoped task lists.
+
+All AI agents with repository access (Claude Code, Codex, Copilot, Jules)
+have commit, push, and tag authority in this repository. `gem push`
+(RubyGems publish) remains Bradley Potts's sole authority. See
+[AGENTS.md](AGENTS.md) for the full commit-policy and release-authority
+grant.
+
+**Protected from automated change:** the vendor-agnostic scope (no API
+tokens, endpoint paths, or resource classes added here) and the stable
+public method names on `Connection::Base` and
+`Handlers::ResponseValidator`. See [AGENTS.md](AGENTS.md) for full agent
+governance and boundary rules.
 
 ## Contributing
 
