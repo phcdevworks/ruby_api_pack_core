@@ -38,6 +38,7 @@ and `ruby_api_pack_wordpress` all depend on for their HTTP client behavior.
 | Codex | [CODEX.md](CODEX.md) |
 | Copilot | [COPILOT.md](COPILOT.md) |
 | Jules | [JULES.md](JULES.md) |
+| Grok  | [GROK.md](GROK.md)   |
 | Roadmap | [ROADMAP.md](ROADMAP.md) |
 | Todo | [TODO.md](TODO.md) |
 | Changelog | [CHANGELOG.md](CHANGELOG.md) |
@@ -284,7 +285,7 @@ This repository follows the PHCDevworks documentation model used across the
 Spectre and Rails/Ruby workspaces:
 
 - `AGENTS.md` defines shared AI boundaries.
-- `CLAUDE.md`, `CODEX.md`, `COPILOT.md`, and `JULES.md` define agent-specific
+- `CLAUDE.md`, `CODEX.md`, `COPILOT.md`, `JULES.md`, and `GROK.md` define agent-specific
   working rules.
 - `.github/copilot-instructions.md` and `.github/codex-instructions.md` provide
   GitHub-integrated assistant guidance.

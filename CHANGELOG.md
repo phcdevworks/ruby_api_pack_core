@@ -4,6 +4,17 @@ All notable changes to this project will be documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the versioning
 reflects gem releases published to RubyGems.
 
+## [Unreleased]
+
+### Changed
+
+- Updated all development dependencies to their latest releases and pinned
+  every `Gemfile` entry with a pessimistic constraint (`bundler ~> 4.0` (was `~> 2.5`), `rubocop ~> 1.92`,
+  `rubocop-performance ~> 1.27`, `rspec_junit_formatter ~> 0.8.0`,
+  `simplecov ~> 1.3` (was `~> 0.22.0`)); refreshed
+  `Gemfile.lock` via `bundle update --all`; lockfile now `BUNDLED WITH 4.0.18`. No runtime/gemspec
+  dependency constraints changed.
+
 ## [0.1.0] - 2026-07-11
 
 **Release Title:** Phase 0 - Shared Foundations
